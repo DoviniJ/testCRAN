@@ -8,9 +8,9 @@ This function outputs the summary of regular model and final risk score values o
 summary_regular_binary(
   Bphe_target,
   Bcov_target,
-  trd_score,
-  add_score,
-  gxe_score,
+  trd_score = "B_trd.sscore",
+  add_score = "B_add.sscore",
+  gxe_score = "B_gxe.sscore",
   Model
 )
 }

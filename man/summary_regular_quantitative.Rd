@@ -8,9 +8,9 @@ This function outputs the summary of regular model and final risk score values o
 summary_regular_quantitative(
   Qphe_target,
   Qcov_target,
-  trd_score,
-  add_score,
-  gxe_score,
+  trd_score = "Q_trd.sscore",
+  add_score = "Q_add.sscore",
+  gxe_score = "Q_gxe.sscore",
   Model
 )
 }

@@ -43,7 +43,7 @@
 #' x[[2]][,2] #to extract the column containing individual ID's 
 #' x[[2]][,3] #to extract the column containing predicted risk scores 
 #' }
-summary_regular_quantitative <- function(Qphe_target, Qcov_target, trd_score, add_score, gxe_score, Model){
+summary_regular_quantitative <- function(Qphe_target, Qcov_target, trd_score = "Q_trd.sscore", add_score = "Q_add.sscore", gxe_score = "Q_gxe.sscore", Model){
   cov_file <- read.table(Qcov_target)
   n_confounders = ncol(cov_file) - 4
   fam=read.table(Qphe_target, header=F) 

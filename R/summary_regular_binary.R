@@ -50,7 +50,7 @@
 #' x[[2]][,2] #to extract the column containing individual ID's
 #' x[[2]][,3] #to extract the column containing predicted risk scores 
 #' }
-summary_regular_binary <- function(Bphe_target, Bcov_target, trd_score, add_score, gxe_score, Model){
+summary_regular_binary <- function(Bphe_target, Bcov_target, trd_score = "B_trd.sscore", add_score = "B_add.sscore", gxe_score = "B_gxe.sscore", Model){
   cov_file <- read.table(Bcov_target)
   n_confounders = ncol(cov_file) - 4
   fam=read.table(Bphe_target, header=F) 
