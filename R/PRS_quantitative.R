@@ -37,7 +37,7 @@ PRS_quantitative <- function(plink_path, b_file, summary_input){
   sink()            
   runPLINK <- function(PLINKoptions = "") system(paste(plink_path, PLINKoptions))
   log_file <- runPLINK(paste0(" --bfile ", b_file, 
-                    " --score ", noquote(summary_input), " 3 6 9 header --out ", tempdir(),"/prs"))
+                    " --score ", noquote(paste0(tempdir(), "/summary_stats")), " 3 6 9 header --out ", tempdir(),"/prs"))
   out = read.table(paste0(tempdir(), "/prs.sscore"), header = F)
   return(out)
 }
